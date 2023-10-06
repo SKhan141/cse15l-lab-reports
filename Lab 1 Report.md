@@ -27,10 +27,9 @@ cd lecture1, it will give me a no such file or directory error (highlighted in b
      <img width="256" alt="cd_dir3" src="https://github.com/SKhan141/cse15l-lab-reports/assets/105250752/f8718719-4f61-4b98-8421-f44d3344135b">  
     
 
-     When you put the path to a file, you get a "Not directory error." Frin this we can conlude that cd is only used to go in or out of directories.
+3. When you put the path to a file, you get a "Not directory error." Frin this we can conlude that cd is only used to go in or out of directories.
 
-
-    <img width="504" alt="cd_file" src="https://github.com/SKhan141/cse15l-lab-reports/assets/105250752/41e964c6-1218-4fa7-a5ef-32eb1d6a8746">
+   <img width="504" alt="cd_file" src="https://github.com/SKhan141/cse15l-lab-reports/assets/105250752/41e964c6-1218-4fa7-a5ef-32eb1d6a8746">
 
 ## ls (List)
 1. When you do ls with no arguments, it shows the contents of the directory you are currently in.
