@@ -34,15 +34,15 @@ cd lecture1, it will give me a no such file or directory error (highlighted in b
 ## ls (List)
 1. When you do ls with no arguments, it shows the contents of the directory you are currently in.
 
-<img width="376" alt="ls_noarg" src="https://github.com/SKhan141/cse15l-lab-reports/assets/105250752/60398c4a-cf27-4bab-9e7e-9747cf90caad">
+   <img width="376" alt="ls_noarg" src="https://github.com/SKhan141/cse15l-lab-reports/assets/105250752/60398c4a-cf27-4bab-9e7e-9747cf90caad">
 
-2. When you ls a directory, it displays all the files and directories in the specified directory. *Files are in normal font, directories are bold and blue.*
+2.  When you ls a directory, it displays all the files and directories in the specified directory. *Files are in normal font, directories are bold and blue.*
 
-<img width="423" alt="ls_directory" src="https://github.com/SKhan141/cse15l-lab-reports/assets/105250752/88e629eb-419e-4bb2-9a7a-2979c69bab8b">
+    <img width="423" alt="ls_directory" src="https://github.com/SKhan141/cse15l-lab-reports/assets/105250752/88e629eb-419e-4bb2-9a7a-2979c69bab8b">
 
-3. When you ls a file, it just displays the file path of that file from the current directory.
+3.  When you ls a file, it just displays the file path of that file from the current directory.
 
-<img width="465" alt="ls_file" src="https://github.com/SKhan141/cse15l-lab-reports/assets/105250752/c457284a-4aa2-4e6b-935d-2d4469a11d35">
+    <img width="465" alt="ls_file" src="https://github.com/SKhan141/cse15l-lab-reports/assets/105250752/c457284a-4aa2-4e6b-935d-2d4469a11d35">
 
 ## cat (Concatenate)
 1. When you cat with no arguments, it goes into the next line where you type in anything, and whatever you type in, it displays that again. Basically a textbox. (Highlighted in Blue)
