@@ -43,7 +43,7 @@
 
 ## cat (Concatenate)
 
-<img width="449" alt="cat" src="https://github.com/SKhan141/cse15l-lab-reports/assets/105250752/42dfee35-e291-4db8-93fe-e1a7d48e66dc">
+   <img width="449" alt="cat" src="https://github.com/SKhan141/cse15l-lab-reports/assets/105250752/42dfee35-e291-4db8-93fe-e1a7d48e66dc">
 
 1. When you cat with no arguments, it goes in the next line where you can type in anything. Whatever you type in, it displays that again, very similar to the functionality of a text box. In the image above, we have highlighted in blue what happens when you cat with no arguments. We are currently in the root directory. If I type in “hello” for example or “bob”, then it just displays that again in the next line.
 
