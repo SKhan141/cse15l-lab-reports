@@ -1,0 +1,21 @@
+# Sohaib Khan's Lab Report 2
+
+## Part 1
+
+Here is the code for my StringServer.java
+
+[SSCode](https://skhan141.github.io/cse15l-lab-reports/StringServer.java)
+
+![ss1](add_messages_1.png)
+
+1. In the first screen shot, the method that is being called is handleRequest.
+2. The argument that it takes is a url, i.e. the url for the server that we have created. The fields in this class are String string, and int num. String is set to an empty string, and num is set to 0. 
+3. In this method, if I add the path/query /add-messages?s=“insert something here”. Then whatever I typed in is added on to the string and the num variable is incremented by 1. 
+
+![ss2](add_messages_2.png)
+1. In the second screen shot, the method that is being called is handleRequest.
+2. The argument that it takes is a url, i.e. the url for the server that we have created. The fields in this class are String string, and int num. String is set to an empty string, and num is set to 0. We have already called to this method once, so the num is currently set to 1, and string is currently set to "Hello"
+3. In this method, if I add the path/query /add-messages?s=“insert something here”. Then whatever I typed in is added on to the string in the next line and the num variable is incremented by 1 to equal 2. 
+
+
+
