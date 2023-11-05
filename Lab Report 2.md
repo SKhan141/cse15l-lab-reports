@@ -63,25 +63,26 @@ import java.net.URI;
 
 1. In the first screen shot, the method that is being called is handleRequest.
 2. The argument that it takes is a url, i.e. the url for the server that we have created. The fields in this class are String string, and int num. String is set to an empty string, and num is set to 0. 
-3. In this method, if I add the path/query /add-messages?s=“insert something here”. Then whatever I typed in is added on to the string and the num variable is incremented by 1. In this above screens shot I did /add-messages?s=“Hello". Before this the num variable was set to 0 and the string variable was empty. I have configured my code to set string to this statement everytime the command add-messages?s is run: "%d. %s\n", num, parameters[1]." Whatever value num is (1 here), it takes the %d spot, and whatever value parameters[1] is ("Hello" here) takes the %s spot. Then, string is set to that whole thing, so here, string would be equal to "1. Hello\n". Then string is returned and that's what we see in the image above.
+3. In this method, if I add the path/query /add-messages?s=“insert something here”. Then whatever I typed in is added on to the string and the num variable is incremented by 1. In this above screens shot I did /add-messages?s=“Hello". Before this the num variable was set to 0 and the string variable was empty. I have configured my code to set string to this statement everytime the command add-messages?s is run: "%d. %s\n", num, parameters[1]." Whatever value num is (1 here), it takes the %d spot, and whatever value parameters[1] is ("Hello" here) takes the %s spot. parameters[1] is what the user types in after "/add-messages?s=" Then, string is set to that whole thing, so here, string would be equal to "1. Hello\n" (as our parameters[1] is "Hello" here). Then our string is returned and that's what we see in the image above.
 
 ![ss2](add_messages_2.png)
 1. In the second screen shot, the method that is being called is handleRequest.
-2. The argument that it takes is a url, i.e. the url for the server that we have created. The fields in this class are String string, and int num. String is set to an empty string, and num is set to 0. We have already called to this method once, so the num is currently set to 1, and string is currently set to "1. Hello\n"
-3. In this method, I want to add "2. How are you?". I would do that by doing path/query /add-messages?s=How are you?. Thus, what would happen is num is incremented by 1, i.e. num = 1+1 = 2. Then string, which is currently set to "1. Hello\n" is going to add on "2. How are you?\n". Thus, the overall string would now equal: "1. Hello\n2. How are you?\n".
+2. The argument that it takes is a url, i.e. the url for the server that we have created. The fields in this class are String string, and int num. String is intialized as an empty string, and num is intialized to be 0. We have already called to this method once, so the num is currently set to 1, and string is currently set to "1. Hello\n"
+3. In this method, I want to add "2. How are you?". I would do that by doing path/query "/add-messages?s=How are you?". Thus, what would happen first is num is incremented by 1, i.e. num = 1+1 = 2. Then string, which is currently set to "1. Hello\n" is going to add on "%d. %s\n", num, parameters[1]." num is our num value, which is 2 now, and parameters[1] is "How are you?\n". So overall, the string would add on "2. How are you?\n". Thus, the overall string would now equal: "1. Hello\n2. How are you?\n".
 
 ## Part 2
 
 ### Path to private key with private key displayed and ls
 ![pkssh](private_key_ssh.png)
 ![pkls](ls_priv_ssh.png)
+![priv_ls](ls_priv_file.png)
 
 From these images, it shows that the path to the private key here is /Users/sohaibkhan/.ssh/id_rsa.
 
 ### Path to public key with public key displayed and ls in ieng account
 ![pubkssh](public_key_ssh.png)
 ![publs](ls_pub_ssh.png)
-![pwd_pub](PWD_pub_file.png)
+![ls pub](ls_pub_file.png)
 
 For these images it shows that the path for our public key is /home/linux/ieng6/cs15lfa23/cs15lfa23aq/.ssh/id_rsa.pub
 
