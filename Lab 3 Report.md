@@ -1,4 +1,4 @@
-# Lab Report 1
+# Lab Report 3
 ## Part 1
 The original code is in the class, ArrayExamples, the method we are looking at it averageWithoutLowest.
 The aim of this method is to take the mean of all the values in the array except the lowest value. But what if there are duplicate lowest values? Then we aim to remove only one of them, or an array of all the same values.
