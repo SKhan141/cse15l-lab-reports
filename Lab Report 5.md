@@ -5,18 +5,26 @@
 ### Original Post
 ![failure/bug](failure.png)
 
-Hi, I can't really get a sense of why my test is failing when I clone my github repository for grading. I am sure it has something to do with my bash script as I am very sure about my ListExamples.java implementation being correct! I was thinking the failure inducing bug has something to do with my classpath and java commands from line 33-39. 
+Hi, I can't really get a sense of why my test is failing when I clone my github repository for grading via grade.sh. I am sure it has something to do with my bash script as I am very sure about my ListExamples.java implementation being correct! I was thinking the failure inducing bug has something to do with my classpath and java commands from line 33-39. 
 
 
 ### TA's Response
 
-Hi, your grade.sh script appears to look fine to me, is it probably in your ListExamples.java implementation. From this current script we can't see what that issue could be, but I noticed you put the output of your JUnit tests in "output.txt" at line 39. Try using the cat command to see what's in that file. That could provide us a better idea of what's going on.
+Hi, your grade.sh script appears fine to me, is it probably in your ListExamples.java implementation. From this current script we can't see what that issue is, but, I noticed you put the output of your JUnit tests in "output.txt" at line 39. Try using the cat command to see what's in that file. That could provide us a better idea of what's going on.
 
 ### Student Trying TA's Advice
 
 ![failure fix](failure_bug.png)
 
-It appears it was actually my ListExamples.java implementation, I can see that the JUnit timed out! This must mean in my ListExamples implementation I have an infinite loop somewhere.
+I did: 
+    
+     echo `cat output.txt`
+ 
+ after the line:
+     
+     java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > output.txt
+
+From my terminal output, it appears my ListExamples.java was the issue, I can see that the JUnit timed out! This must mean in ListExamples.java I have an infinite loop somewhere.
 
 ### Information About The Setup
 #### 1. File and Directory Structure Needed
@@ -180,14 +188,14 @@ In the grade.sh file to read output.txt, I typed:
 
 #### 4. A description of what to edit to fix the bug
 
-In this code block given here in the merge method:
+In this code block given here in the merge method of ListExamples.java:
 
         while(index2 < list2.size()) {
           result.add(list2.get(index2));
           index1 += 1;
         }
 
-I changed index1 to index2 to fix the issue.
+I changed index1 to index2 to fix the issue, because index2 wasn't being incremented we were stuck in an infinite loop:
       
       while(index2 < list2.size()) {
           result.add(list2.get(index2));
@@ -195,12 +203,11 @@ I changed index1 to index2 to fix the issue.
         }
     
 
-    
-
+ 
 
 
 ## Part 2: Reflection
 
-There are so many great things I learned from this class which I can go on about, the command line arguments, bash scripts, vim, etc. But the main thing that I took advantage of and implemented immediately was JDB. JDB is a phenomenal tool; I have already started using it with my CSE12 PAs and it has been extremely advantageuous when it comes to debugging my code. Knowing about this in CSE11 would have been helpful as this was a huge time saver.
+There were many great things I learned from this class which I can go on about, the command line arguments, bash scripts, Vim, etc. But the main thing that I took advantage of and implemented immediately was JDB. JDB is a phenomenal tool; I have already started using it with my CSE12 PAs and it has been extremely advantageuous when it comes to debugging my code. Knowing about this in CSE11 would have been helpful as this is a huge time saver as opposed to inserting random print statements in my code.
 
 
