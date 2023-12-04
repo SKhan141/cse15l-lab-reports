@@ -14,7 +14,7 @@ Hi, your grade.sh script appears fine to me, is it probably in your ListExamples
 
 ### Student Trying TA's Advice
 
-![failure fix](failure_bug.png)
+![failure fix](fix_failure.png)
 
 I did: 
     
